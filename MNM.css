@@ -3780,9 +3780,9 @@ body.theme-light {
 ==Editor ==
 */
 
-.markdown-source-view {
-	color: #002244;
-}
+/* .markdown-source-view { */
+/* 	color: #002244; */
+/* } */
 
 /* Blockquote */
 .cm-quote {
@@ -4045,3 +4045,4 @@ display: none;
 .mod-right-split .workspace-leaf-content .graph-controls {
 	display: none;
 }
+
