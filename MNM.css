@@ -3924,18 +3924,27 @@ body.theme-light {
 /* .cm-formatting-list.cm-list-1 {
   padding-left: calc(var(--list-indent) * 1);
 } */
-/* .cm-formatting-list.cm-list-2 {
-  padding-left: calc(var(--list-indent) * 2);
+.HyperMD-list-line-2 .cm-formatting-list {
+	padding-left: calc(var(--list-indent) * 2);
 }
-.cm-formatting-list.cm-list-3 {
-  padding-left: calc(var(--list-indent) * 3);
+.HyperMD-list-line-3 .cm-formatting-list {
+	padding-left: calc(var(--list-indent) * 3 + calc(var(--list-indent) * 0.75));
 }
-.cm-formatting-list.cm-list-4 {
-  padding-left: calc(var(--list-indent) * 4);
+.HyperMD-list-line-4 .cm-formatting-list {
+	padding-left: calc(var(--list-indent) * 4 + calc(var(--list-indent) * 1.5));
 }
-.cm-formatting-list.cm-list-5 {
-  padding-left: calc(var(--list-indent) * 5);
-} */
+.HyperMD-list-line-5 .cm-formatting-list {
+	padding-left: calc(var(--list-indent) * 5 + calc(var(--list-indent) * 2.25));
+}
+.HyperMD-list-line-6 .cm-formatting-list {
+	padding-left: calc(var(--list-indent) * 6 + calc(var(--list-indent) * 3));
+}
+.HyperMD-list-line-7 .cm-formatting-list {
+	padding-left: calc(var(--list-indent) * 7 + calc(var(--list-indent) * 3.5));
+}
+.HyperMD-list-line-8 .cm-formatting-list {
+	padding-left: calc(var(--list-indent) * 8 + calc(var(--list-indent) * 4));
+}
 
 .HyperMD-list-line {
 	--line-color: var(--text-faint);
@@ -3947,6 +3956,7 @@ body.theme-light {
 .HyperMD-list-line-6,
 .HyperMD-list-line-7,
 .HyperMD-list-line-8 {
+	--list-indent: 8px;
 	position: relative;
 }
 .HyperMD-list-line-2::before,
@@ -3961,35 +3971,35 @@ body.theme-light {
 	top: 0;
 	bottom: 0;
 	left: 7px;
-	box-shadow: 1px 0 0 var(--line-color) inset;
+	box-shadow: 3px 0 0 var(--line-color);
 	width: 1px;
 }
 .HyperMD-list-line-3::before {
-	box-shadow: 1px 0 0 var(--line-color) inset, 8px 0 0 var(--line-color);
+	box-shadow: 3px 0 0 var(--line-color), 27px 0 0 var(--line-color);
 }
 .HyperMD-list-line-4::before {
-	box-shadow: 1px 0 0 var(--line-color) inset, 8px 0 0 var(--line-color),
-		16px 0 0 var(--line-color);
+	box-shadow: 3px 0 0 var(--line-color), 27px 0 0 var(--line-color),
+		49px 0 0 var(--line-color);
 }
 .HyperMD-list-line-5::before {
-	box-shadow: 1px 0 0 var(--line-color) inset, 8px 0 0 var(--line-color),
-		16px 0 0 var(--line-color), 24px 0 0 var(--line-color);
+	box-shadow: 3px 0 0 var(--line-color), 27px 0 0 var(--line-color),
+		49px 0 0 var(--line-color), 71px 0 0 var(--line-color);
 }
 .HyperMD-list-line-6::before {
-	box-shadow: 1px 0 0 var(--line-color) inset, 8px 0 0 var(--line-color),
-		16px 0 0 var(--line-color), 24px 0 0 var(--line-color),
-		32px 0 0 var(--line-color);
+	box-shadow: 3px 0 0 var(--line-color), 27px 0 0 var(--line-color),
+		49px 0 0 var(--line-color), 71px 0 0 var(--line-color),
+		94px 0 0 var(--line-color);
 }
 .HyperMD-list-line-7::before {
-	box-shadow: 1px 0 0 var(--line-color) inset, 8px 0 0 var(--line-color),
-		16px 0 0 var(--line-color), 24px 0 0 var(--line-color),
-		32px 0 0 var(--line-color), 40px 0 0 var(--line-color);
+	box-shadow: 3px 0 0 var(--line-color), 27px 0 0 var(--line-color),
+		49px 0 0 var(--line-color), 71px 0 0 var(--line-color),
+		94px 0 0 var(--line-color), 116px 0 0 var(--line-color);
 }
 .HyperMD-list-line-8::before {
-	box-shadow: 1px 0 0 var(--line-color) inset, 8px 0 0 var(--line-color),
-		16px 0 0 var(--line-color), 24px 0 0 var(--line-color),
-		32px 0 0 var(--line-color), 40px 0 0 var(--line-color),
-		48px 0 0 var(--line-color);
+	box-shadow: 3px 0 0 var(--line-color), 27px 0 0 var(--line-color),
+		49px 0 0 var(--line-color), 71px 0 0 var(--line-color),
+		94px 0 0 var(--line-color), 116px 0 0 var(--line-color),
+		137px 0 0 var(--line-color);
 }
 
 /* ---------------------------------------------------------------- */
