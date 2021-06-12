@@ -3600,10 +3600,12 @@ Customizations
 
 	--font-monospace: SFMono-Regular, Menlo, Consolas, 'Roboto Mono', monospace;
 
-	--text-editor: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+	/* --text-editor: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif; */
+	--text-editor: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
 		'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif;
-	/* --text-editor: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif; */
 	--text-preview: var(--text-editor);
 
 	/* Headings */
@@ -3800,6 +3802,12 @@ body.theme-light {
 	font-weight: 600;
 	letter-spacing: -0.015em;
 	/* line-height: 1.4; */
+}
+
+.cm-s-obsidian .HyperMD-quote-2 .cm-quote {
+	line-height: 1.25;
+	font-weight: 300;
+	font-size: 200%;
 }
 
 /* Code Block */
@@ -4023,6 +4031,14 @@ body.theme-light {
 	/* line-height: 1.4; */
 }
 
+.markdown-preview-view blockquote > blockquote {
+	border: none;
+	line-height: 1.25;
+	font-weight: 300;
+	font-size: 200%;
+	text-align: center;
+}
+
 /* Checklist */
 .contains-task-list {
 	padding-inline-start: 0.45em;
@@ -4039,7 +4055,7 @@ body.theme-light {
 	transition: background 120ms linear;
 }
 .task-list-item:hover {
-	background: var(--ui-highlight-background);
+	/* background: var(--ui-highlight-background); */
 }
 .task-list-item > p {
 	margin: 0;
@@ -4096,7 +4112,7 @@ body.theme-light {
 .minimal-theme.links-ext-on .external-link,
 .external-link {
 	/* font-weight: 500; */
-	opacity: 0.6;
+	/* opacity: 0.6; */
 }
 .markdown-preview-view .internal-link:hover,
 .minimal-theme.links-ext-on .external-link:hover,
@@ -4105,6 +4121,21 @@ body.theme-light {
 }
 
 /* List */
+
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+	padding-inline-start: 1em;
+	position: relative;
+}
+
+.markdown-preview-view ul.contains-task-list {
+	padding-inline-start: 0;
+}
+
+.markdown-preview-view ul.contains-task-list ul {
+	padding-inline-start: 1.5em;
+}
+
 .markdown-preview-view ul > li:not(.task-list-item)::before {
 	color: var(--text-muted);
 }
@@ -4119,13 +4150,28 @@ body.theme-light {
 	margin: 0;
 }
 
-.markdown-preview-view ul,
-.markdown-preview-view ol {
-	padding-inline-start: 1em;
-}
-
 .markdown-preview-view ol {
 	margin-left: 0;
+}
+
+.markdown-preview-view li ul,
+.markdown-preview-view li ol {
+	margin-top: 0.25em;
+}
+
+.markdown-preview-view ul li > ul::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	box-shadow: calc(-2em + 2px) 0 0 var(--text-faint);
+	opacity: 0.5;
+}
+
+/* Paragraph */
+.markdown-preview-view p {
+	margin: 1.25em 0;
 }
 
 /* Query */
@@ -4200,3 +4246,4 @@ body.theme-light {
 .mod-right-split .workspace-leaf-content .graph-controls {
 	display: none;
 }
+
