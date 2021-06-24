@@ -2,8 +2,6 @@
 
 The minimal Obsidian theme, based on [@kepano's Minimal](https://github.com/kepano/obsidian-minimal)
 
-![Screenshot of the MNM theme in Obsidian](./screenshot.png)
-
 ## Instructions
 
 1. On your computer, navigate to your Obsidian vault folder.
