@@ -1,4 +1,4 @@
-# MNM
+# ◆ MNM
 
 The minimal Obsidian theme, based on [@kepano's Minimal](https://github.com/kepano/obsidian-minimal)
 
