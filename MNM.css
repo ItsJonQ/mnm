@@ -4387,7 +4387,7 @@ section.footnotes {
 	margin-top: 0.25em;
 }
 
-/* .markdown-preview-view ul li > ul::before {
+.markdown-preview-view ul li > ul::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -4395,7 +4395,7 @@ section.footnotes {
 	width: 1px;
 	box-shadow: calc(-2em + 2px) 0 0 var(--text-faint);
 	opacity: 0.5;
-} */
+}
 
 /* Meta */
 .frontmatter.language-yaml {
