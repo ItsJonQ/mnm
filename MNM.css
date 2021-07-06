@@ -3822,6 +3822,17 @@ body.theme-light {
 	background: var(--interactive-accent);
 }
 
+/* Preview */
+.popover.hover-popover {
+	width: 30vw;
+	height: 30vh;
+	min-width: 300px;
+}
+
+.popover.hover-popover .markdown-embed {
+	height: 100%;
+}
+
 /* Switch */
 .checkbox-container {
 	cursor: pointer;
@@ -4507,6 +4518,7 @@ section.footnotes {
 .markdown-preview-view table {
 	margin-bottom: 1.5em;
 	margin-top: 1.5em;
+	width: 100%;
 }
 
 /* Tag */
