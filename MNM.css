@@ -1,6 +1,6 @@
 /*
 
-MNM 0.0.2 by @itsjonq, based on Minimal by @kepano
+MNM 0.0.1 by @itsjonq, based on Minimal by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings
 plugin and the Hider plugin.
@@ -3621,7 +3621,7 @@ Customizations
 	--editorH1: var(--h1);
 	--headlineH1: var(--editorH1);
 
-	--max-text-content-width: 760px;
+	--max-text-content-width: 720px;
 	--line-width: var(--max-text-content-width);
 }
 
@@ -3640,13 +3640,13 @@ Customizations
 }
 
 /* Font Smoothing */
-.CodeMirror-lines,
+/* .CodeMirror-lines,
 .markdown-source-view,
 .markdown-preview-view,
 .cm-s-obsidian .cm-formatting-hashtag {
 	-webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
-}
+} */
 
 /* ---------------------------------------------------------------- */
 
@@ -3697,6 +3697,7 @@ body.theme-light {
 	--text-heading: hsl(var(--base-h), var(--base-s), calc(var(--base-l) - 80%));
 	--text-normal: hsl(var(--base-h), var(--base-s), calc(var(--base-l) - 75%));
 	--text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
+	--text-highlight-bg: rgba(255, 243, 180, 0.6);
 }
 .theme-dark {
 	--text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 10%));
@@ -3775,12 +3776,12 @@ body.theme-light {
 }
 
 /* Headings */
-.cm-header-1,
-.cm-header-2,
-.cm-header-3,
-.cm-header-4,
-.cm-header-5,
-.cm-header-6,
+.cm-header-1:not(.cm-formatting),
+.cm-header-2:not(.cm-formatting),
+.cm-header-3:not(.cm-formatting),
+.cm-header-4:not(.cm-formatting),
+.cm-header-5:not(.cm-formatting),
+.cm-header-6:not(.cm-formatting),
 .markdown-preview-view h1,
 .markdown-preview-view h2,
 .markdown-preview-view h3,
@@ -3798,6 +3799,15 @@ body.theme-light {
 .cm-s-obsidian .cm-formatting-header.cm-header-5,
 .cm-s-obsidian .cm-formatting-header.cm-header-6 {
 	color: var(--text-faint);
+	opacity: 0.8;
+}
+
+.cm-formatting.cm-formatting-strong,
+.cm-formatting.cm-formatting-em,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian .cm-formatting.cm-formatting-code {
+	color: var(--text-faint);
+	opacity: 0.8;
 }
 
 /* Icons */
@@ -3836,10 +3846,6 @@ body.theme-light {
 /*
 ==Editor ==
 */
-
-/* .markdown-source-view {
-  color: #002244;
-} */
 
 /* Blockquote */
 .cm-quote {
@@ -3987,7 +3993,7 @@ body.theme-light {
 }
 
 .cm-s-obsidian span.cm-formatting-link {
-	opacity: 0.4;
+	color: var(--text-faint);
 }
 
 .cm-s-obsidian span.cm-hmd-internal-link {
@@ -3998,6 +4004,11 @@ body.theme-light {
 .minimal-theme.links-ext-on .external-link:hover,
 .external-link:hover {
 	opacity: 1;
+}
+
+.cm-formatting,
+.cm-formatting-link {
+	opacity: 0.75 !important;
 }
 
 /* Prompt */
@@ -4115,6 +4126,7 @@ body.theme-light {
 		137px 0 0 var(--line-color);
 } */
 
+/** Comet/trailing bullet */
 .cm-hmd-list-indent {
 	display: inline-block;
 	font-size: 40px;
@@ -4125,7 +4137,8 @@ body.theme-light {
 	position: relative;
 	border-radius: 12px;
 	top: -4px;
-	opacity: 0.05;
+	opacity: 0;
+	/* opacity: 0.05; */
 }
 
 .cm-formatting.cm-formatting-list.cm-formatting-list-ul {
@@ -4134,18 +4147,20 @@ body.theme-light {
 }
 
 .cm-formatting.cm-formatting-list.cm-formatting-list-ul:after {
+	color: var(--text-normal);
 	content: '·';
-	visibility: visible;
 	display: block;
+	font-family: var(--text);
 	font-size: 40px;
 	line-height: 1;
-	position: absolute;
 	opacity: 0.5;
-	right: 4px;
+	opacity: 1;
 	overflow: hidden;
-	opacity: 0.5;
+	position: absolute;
+	right: 4px;
 	right: 4px;
 	top: -13px;
+	visibility: visible;
 }
 
 .zoom-plugin-bls-zoom
@@ -4159,6 +4174,10 @@ body.theme-light {
 /*
 == Preview ===
 */
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+	padding-top: 20px;
+}
 
 /* Typography */
 .workspace-leaf-content[data-type='markdown'] {
@@ -4180,14 +4199,37 @@ body.theme-light {
 	background: var(--background-primary-alt);
 	border-radius: 6px;
 	padding: 4px;
+	background: transparent;
+	padding: 0;
+}
+.search-result-file-title {
+	--cursor: pointer;
+	border-radius: 6px;
+	font-weight: 600;
+}
+.search-result-file-title:hover,
+.workspace-split.mod-root .search-result-file-match:hover {
+	background: var(--background-primary-alt) !important;
 }
 .search-result-file-matches {
 	border-color: var(--background-modifier-border);
-	font-size: 0.8em;
+	border-color: transparent;
+	color: var(--text-normal);
+}
+.markdown-preview-view .search-result-file-title,
+.markdown-preview-view .search-result-file-matches {
+	font-size: 1em;
+}
+
+.search-result-file-match:after {
+	opacity: 0;
 }
 .search-result-file-match {
+	--cursor: pointer;
 	border-radius: 6px;
 	padding: 10px 10px;
+	line-height: var(--line-height);
+	width: 100%;
 }
 .workspace-split.mod-root .search-result-file-match:hover {
 	background: var(--ui-highlight-background);
@@ -4197,6 +4239,13 @@ body.theme-light {
 }
 .tree-item.search-result:last-child .search-result-file-matches {
 	margin-bottom: 0;
+}
+.search-result-file-match:not(:last-child) {
+	margin-bottom: 4px;
+}
+
+.backlink-pane .search-result-file-matches {
+	font-size: var(--font-small);
 }
 
 /* Blockquote */
@@ -4238,12 +4287,22 @@ body.theme-light {
 	padding-left: 1px;
 }
 
-.markdown-embed .markdown-preview-section:last-child p,
-.markdown-embed .markdown-preview-section:last-child ul {
-	margin-block-end: revert;
+.markdown-preview-view .markdown-embed {
+	border-radius: 8px;
+	border: none;
+	border: 1px solid var(--background-primary-alt);
+	padding: 8px 16px;
 }
-.markdown-preview-view .markdown-embed-content p:first-child {
-	margin-top: revert;
+
+.markdown-preview-pusher + div > *:first-child {
+	margin-top: 0;
+}
+.markdown-preview-pusher + div > *:last-child {
+	margin-top: 0;
+}
+
+.markdown-preview-pusher + div p:empty {
+	display: none;
 }
 
 /* Checklist */
@@ -4344,7 +4403,8 @@ section.footnotes {
 }
 
 .markdown-preview-view ul > li:not(.task-list-item)::marker {
-	color: var(--text-faint);
+	/* color: var(--text-faint); */
+	color: var(--text-normal);
 }
 .markdown-preview-view ul > li:not(.task-list-item)::before {
 	content: initial;
@@ -4387,7 +4447,7 @@ section.footnotes {
 	margin-top: 0.25em;
 }
 
-.markdown-preview-view ul li > ul::before {
+/* .markdown-preview-view ul li > ul::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -4395,7 +4455,7 @@ section.footnotes {
 	width: 1px;
 	box-shadow: calc(-2em + 2px) 0 0 var(--text-faint);
 	opacity: 0.5;
-}
+} */
 
 /* Meta */
 .frontmatter.language-yaml {
