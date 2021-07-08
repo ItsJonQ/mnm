@@ -1,6 +1,6 @@
 /*
 
-MNM 0.0.1 by @itsjonq, based on Minimal by @kepano
+MNM 0.0.3 by @itsjonq, based on Minimal by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings
 plugin and the Hider plugin.
@@ -3659,9 +3659,12 @@ body {
 	--systemBlue: rgb(0, 122, 255);
 	--systemIndigo: rgb(88, 86, 214);
 	--systemPurple: rgb(175, 82, 222);
+	--systemCodeBackgroundOpacity: 0.06;
+	--systemLinkBackgroundOpacity: 0.12;
 
 	--ui-active-line: rgba(0, 0, 0, 0.015);
-	--ui-code-background: rgba(0, 0, 0, 0.06);
+	--ui-code-background: rgba(0, 0, 0, var(--systemCodeBackgroundOpacity));
+	--ui-link-background: rgba(0, 0, 0, var(--systemLinkBackgroundOpacity));
 	--ui-highlight-background: rgba(0, 0, 0, 0.05);
 }
 body.theme-dark {
@@ -3677,7 +3680,8 @@ body.theme-dark {
 	);
 
 	--ui-active-line: rgba(255, 255, 255, 0.02);
-	--ui-code-background: rgba(255, 255, 255, 0.06);
+	--ui-code-background: rgba(255, 255, 255, var(--systemCodeBackgroundOpacity));
+	--ui-link-background: rgba(255, 255, 255, var(--systemLinkBackgroundOpacity));
 }
 
 body.theme-dark,
@@ -3706,7 +3710,7 @@ body.theme-light {
 /* ---------------------------------------------------------------- */
 
 /*
-== App: Header ==
+== App ==
 */
 .view-header {
 	height: 36px;
@@ -3721,6 +3725,30 @@ body.theme-light {
 .view-header-title:hover,
 .view-header-title:focus {
 	opacity: 0.75;
+}
+
+.titlebar {
+	background: var(--background-primary);
+	border-bottom-color: transparent;
+}
+
+.titlebar-button-container {
+	top: 1px;
+}
+
+.status-bar {
+	display: none;
+}
+
+.is-collapsed .side-dock-actions,
+.is-collapsed .side-dock-settings {
+	opacity: 0;
+	transition: opacity 100ms linear;
+}
+
+.side-dock-ribbon:hover .side-dock-actions,
+.side-dock-ribbon:hover .side-dock-settings {
+	opacity: 1;
 }
 
 /* ---------------------------------------------------------------- */
@@ -3820,6 +3848,47 @@ body.theme-light {
 
 .nav-action-button.is-active:hover {
 	background: var(--interactive-accent);
+}
+
+/* Links */
+.minimal-theme.links-int-on .markdown-preview-view .internal-link,
+.markdown-preview-view .internal-link,
+.cm-s-obsidian span.cm-url,
+/* .cm-s-obsidian span.cm-formatting-link, */
+.cm-s-obsidian span.cm-hmd-internal-link,
+.minimal-theme.links-ext-on .external-link,
+.external-link,
+.cm-url {
+	font-weight: 500;
+	text-decoration: none !important;
+	box-shadow: 0 2px 0 var(--ui-link-background);
+}
+
+.minimal-theme.links-int-on .markdown-preview-view .internal-link:hover,
+.markdown-preview-view .internal-link:hover,
+.cm-s-obsidian span.cm-url:hover,
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.minimal-theme.links-ext-on .external-link:hover,
+.external-link:hover,
+.cm-url:hover {
+	cursor: pointer;
+	/* text-decoration: underline; */
+}
+
+.minimal-theme.links-int-on .markdown-preview-view .internal-link,
+.markdown-preview-view .internal-link,
+/* .cm-s-obsidian span.cm-url,
+.cm-s-obsidian span.cm-formatting-link,
+.cm-s-obsidian span.cm-hmd-internal-link, */
+.minimal-theme.links-ext-on .external-link,
+.external-link,
+.cm-url {
+	/* padding-left: 3px;
+	padding-right: 3px; */
+}
+
+.external-link {
+	padding-right: 16px;
 }
 
 /* Preview */
@@ -3988,16 +4057,6 @@ body.theme-light {
 	opacity: 1;
 }
 
-.cm-s-obsidian span.cm-formatting-link,
-.cm-s-obsidian span.cm-hmd-internal-link,
-.minimal-theme.links-ext-on .external-link,
-.external-link,
-.cm-url {
-	/* font-weight: 500; */
-	text-decoration: underline;
-	/* opacity: 0.6; */
-}
-
 .minimal-theme.links-ext-on .external-link,
 .external-link {
 	opacity: 1;
@@ -4017,9 +4076,9 @@ body.theme-light {
 	opacity: 1;
 }
 
-.cm-formatting,
+.cm-formatting:not(.cm-inline-code),
 .cm-formatting-link {
-	opacity: 0.75 !important;
+	opacity: 0.55 !important;
 }
 
 /* Prompt */
@@ -4190,6 +4249,12 @@ body.theme-light {
 	padding-top: 20px;
 }
 
+.markdown-preview-view.is-readable-line-width
+	.markdown-embed-content
+	.markdown-preview-sizer {
+	padding-top: 0;
+}
+
 /* Typography */
 .workspace-leaf-content[data-type='markdown'] {
 	font-family: var(--text-preview);
@@ -4255,7 +4320,9 @@ body.theme-light {
 	margin-bottom: 4px;
 }
 
+.backlink-pane .search-result-file-title,
 .backlink-pane .search-result-file-matches {
+	--font-small: calc(var(--font-normal) * 0.9);
 	font-size: var(--font-small);
 }
 
@@ -4339,6 +4406,11 @@ body.theme-light {
 }
 .markdown-preview-view .task-list-item-checkbox {
 	cursor: pointer;
+}
+
+/* Front-matter */
+.markdown-preview-view .frontmatter-container {
+	display: none;
 }
 
 /* Footnotes */
