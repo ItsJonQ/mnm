@@ -37,6 +37,24 @@ body.theme-dark {
 	--base-s: 57%;
 	--base-d: 10%;
 
+	--background-primary: hsl(var(--base-h), var(--base-s), var(--base-d));
+	--background-primary-alt: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) - 2%)
+	);
+	--background-secondary: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) - 2%)
+	);
+	--background-secondary-alt: hsl(var(--base-h), var(--base-s), var(--base-d));
+	--background-tertiary: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) + 2%)
+	);
+
 	--systemRed: #ff4655;
 
 	--text-heading: #fff;
