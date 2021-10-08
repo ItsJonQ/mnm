@@ -1,0 +1,12 @@
+.cm-hmd-list-indent {
+	display: inline-block;
+	font-size: 40px;
+	height: 3px;
+	line-height: 0;
+	overflow: hidden;
+	background: currentColor;
+	position: relative;
+	border-radius: 12px;
+	top: -3px;
+	opacity: 0.05;
+}

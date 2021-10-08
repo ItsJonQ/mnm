@@ -1,0 +1,22 @@
+:root {
+	--normal-weight: 400;
+	--bold-weight: 800;
+}
+
+.markdown-preview-view h2,
+.HyperMD-header-2,
+.cm-s-obsidian .cm-header-2,
+.markdown-preview-view h3,
+.HyperMD-header-3,
+.cm-s-obsidian .cm-header-3,
+.markdown-preview-view h4,
+.HyperMD-header-4,
+.cm-s-obsidian .cm-header-4,
+.markdown-preview-view h5,
+.HyperMD-header-5,
+.cm-s-obsidian .cm-header-5,
+.markdown-preview-view h6,
+.HyperMD-header-6,
+.cm-s-obsidian .cm-header-6 {
+	font-weight: 700;
+}

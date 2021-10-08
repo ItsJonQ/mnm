@@ -1,0 +1,21 @@
+.workspace-ribbon {
+	border-width: 0;
+}
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+	border-right: none;
+}
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+	border-left: none;
+}
+.workspace-tabs {
+	margin: 4px 0 16px;
+	border-radius: 8px;
+}
+.workspace-split .workspace-tabs {
+	background: var(--background-secondary);
+}
+
+.workspace-ribbon.mod-right {
+	border-radius: 8px;
+}

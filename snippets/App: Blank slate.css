@@ -1,0 +1,21 @@
+.workspace-leaf-content
+	.view-content
+	.empty-state-container
+	.empty-state-title {
+	display: none;
+}
+.workspace-leaf-content
+	.view-content
+	.empty-state-container
+	.empty-state-action-list {
+	display: none;
+}
+
+.workspace-leaf-content .view-content .empty-state-container::before {
+	content: 'Express yourself.';
+	font-size: 1.5em;
+	font-weight: 600;
+	letter-spacing: -0.75px;
+	line-height: 1.1;
+	opacity: 0.1;
+}

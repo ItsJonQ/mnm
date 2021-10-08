@@ -1,0 +1,55 @@
+/*
+
+Valorant (MNM enhancement) by @itsjonq
+
+*/
+
+/*
+== System: Colors ==
+*/
+body.theme-light {
+	--base-h: 38;
+	--base-s: 15%;
+	--base-l: 90%;
+
+	--background-primary: hsl(var(--base-h), var(--base-s), var(--base-l));
+
+	--text-heading: #0f1923;
+	--text-normal: #383e3a;
+
+	--systemRed: #ff4655;
+
+	--interactive-accent: var(--systemRed);
+	--interactive-accent-hover: var(--systemRed);
+
+	--enhanced-link-color: var(--systemRed);
+
+	/* --background-primary-alt: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) - 5%)
+	);
+	--background-secondary: hsl(var(--base-h), var(--base-s), 4%);
+	--background-secondary-alt: hsl(var(--base-h), var(--base-s), 10%); */
+}
+body.theme-dark {
+	--base-h: 210;
+	--base-s: 57%;
+	--base-d: 10%;
+
+	--systemRed: #ff4655;
+
+	--text-heading: #fff;
+	--text-normal: #ece8e1;
+
+	--interactive-accent: var(--systemRed);
+	--interactive-accent-hover: var(--systemRed);
+
+	--enhanced-link-color: var(--systemRed);
+}
+
+body.theme-light,
+body.theme-dark {
+	--text-accent: var(--enhanced-link-color);
+	--text-accent-hover: var(--text-accent);
+}

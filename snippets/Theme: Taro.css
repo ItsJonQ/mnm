@@ -1,0 +1,62 @@
+/*
+
+Taro (MNM enhancement) by @itsjonq
+
+*/
+
+/*
+== System: Colors ==
+*/
+body.theme-dark {
+	/* Colors */
+	--systemBlue: rgb(10, 132, 255);
+	--systemIndigo: rgb(94, 92, 230);
+	--systemPurple: #8b5cf6;
+
+	--ui-active-line: rgba(255, 255, 255, 0.02);
+	--ui-code-background: rgba(255, 255, 255, 0.06);
+
+	--interactive-accent: var(--systemPurple);
+	--interactive-accent-hover: var(--systemPurple);
+
+	--text-bold: #fe52b9;
+
+	--base-h: 244;
+	--base-s: 30%;
+	--base-d: 20%;
+
+	/* --text-normal: #99ddee;
+--text-heading: #cceeff; */
+	--text-muted: hsl(
+		var(--base-h),
+		calc(var(--base-s) - 10%),
+		calc(var(--base-d) + 45%)
+	);
+
+	--background-primary: hsl(var(--base-h), var(--base-s), 8%);
+	--background-primary-alt: hsl(var(--base-h), var(--base-s), 13%);
+	--background-secondary: hsl(var(--base-h), var(--base-s), 4%);
+	--background-secondary-alt: hsl(var(--base-h), var(--base-s), 10%);
+
+	--background-modifier-border: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) - 4%)
+	);
+	--background-modifier-border-hover: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) + 10%)
+	);
+	--background-modifier-border-focus: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) + 20%)
+	);
+	--background-modifier-cover: hsla(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) - 4%),
+		0.8
+	);
+}
