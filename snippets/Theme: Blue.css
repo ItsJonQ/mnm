@@ -1,0 +1,109 @@
+/*
+
+Craft by @itsjonq
+
+*/
+
+/*
+== System: Colors ==
+*/
+:root {
+	--text-normal: black;
+	--text-heading: var(--text-normal, black);
+
+	--enhanced-link-color: #8b5cf6;
+	/* --enhanced-link-color: currentColor; */
+
+	--enhanced-strong-color: #fe52b9;
+	/* --enhanced-strong-color: #8B5CF6; */
+
+	--tag-background-color: #e6eaff;
+	--tag-text-color: #1d4ed8;
+}
+
+body.theme-light {
+	--systemBlue: #2563eb;
+
+	--enhanced-link-color: var(--systemBlue);
+	--interactive-accent: var(--systemBlue);
+	--interactive-accent-hover: var(--systemBlue);
+}
+
+body.theme-light,
+body.theme-dark {
+	--text-accent: var(--enhanced-link-color);
+	--text-accent-hover: var(--text-accent);
+
+	/* --text-selection: hsla(258, 90%, 66%, 30%); */
+}
+
+body.theme-dark {
+	/* Colors */
+	--systemBlue: rgb(10, 132, 255);
+	--systemIndigo: rgb(94, 92, 230);
+	--systemBlue: #468cff;
+
+	--ui-active-line: rgba(255, 255, 255, 0.02);
+	--ui-code-background: rgba(255, 255, 255, 0.06);
+
+	--interactive-accent: var(--systemBlue);
+	--interactive-accent-hover: var(--systemBlue);
+
+	--text-heading: white;
+
+	--enhanced-link-color: #468cff;
+
+	--tag-background-color: #152e58;
+	--tag-text-color: var(--systemBlue);
+}
+
+.workspace-leaf.mod-active .view-header-title,
+.markdown-preview-view h1,
+.HyperMD-header-1,
+.cm-s-obsidian .cm-header-1,
+.markdown-preview-view h2,
+.HyperMD-header-2,
+.cm-s-obsidian .cm-header-2,
+.markdown-preview-view h3,
+.HyperMD-header-3,
+.cm-s-obsidian .cm-header-3,
+.markdown-preview-view h4,
+.HyperMD-header-4,
+.cm-s-obsidian .cm-header-4,
+.markdown-preview-view h5,
+.HyperMD-header-5,
+.cm-s-obsidian .cm-header-5,
+.markdown-preview-view h6,
+.HyperMD-header-6,
+.cm-s-obsidian .cm-header-6 {
+	color: var(--text-heading);
+	font-family: var(--text);
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+	--font-code: 0.85em;
+}
+
+body.theme-light .cm-s-obsidian span.cm-inline-code,
+body.theme-light .markdown-preview-view code {
+	--ui-code-background: var(--tag-background-color);
+	color: var(--tag-text-color);
+}
+
+body.theme-dark .cm-s-obsidian span.cm-inline-code,
+body.theme-dark .markdown-preview-view code {
+	--ui-code-background: var(--tag-background-color);
+	color: var(--tag-text-color);
+}
+
+body.theme-light .cm-s-obsidian span.cm-formatting-code.cm-inline-code {
+	color: rgba(155, 155, 155, 0.3);
+}
+body.theme-dark .cm-s-obsidian span.cm-formatting-code.cm-inline-code {
+	color: rgba(155, 155, 155, 0.5);
+}
+
+.HyperMD-codeblock-bg {
+	--background-secondary: transparent;
+}

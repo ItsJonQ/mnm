@@ -1,6 +1,6 @@
 /*
 
-MNM 0.1.0 by @itsjonq, based on Minimal by @kepano
+MNM 0.1.1 by @itsjonq, based on Minimal by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings
 plugin and the Hider plugin.
@@ -3890,6 +3890,17 @@ body.theme-dark {
 	opacity: 0.8;
 }
 
+.theme-dark .cm-formatting-header,
+.theme-dark .cm-s-obsidian .cm-formatting-header.cm-header-1,
+.theme-dark .cm-s-obsidian .cm-formatting-header.cm-header-2,
+.theme-dark .cm-s-obsidian .cm-formatting-header.cm-header-3,
+.theme-dark .cm-s-obsidian .cm-formatting-header.cm-header-4,
+.theme-dark .cm-s-obsidian .cm-formatting-header.cm-header-5,
+.theme-dark .cm-s-obsidian .cm-formatting-header.cm-header-6 {
+	color: var(--text-muted);
+	opacity: 0.3 !important;
+}
+
 .cm-formatting.cm-formatting-strong,
 .cm-formatting.cm-formatting-em,
 .cm-s-obsidian span.cm-formatting-highlight,
@@ -4129,6 +4140,9 @@ body.theme-dark {
 .cm-s-obsidian span.cm-formatting-link {
 	color: var(--text-faint);
 }
+.theme-dark .cm-s-obsidian span.cm-formatting-link {
+	color: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 20%));
+}
 
 .cm-s-obsidian span.cm-hmd-internal-link {
 	opacity: 1;
@@ -4143,6 +4157,10 @@ body.theme-dark {
 .cm-formatting:not(.cm-inline-code),
 .cm-formatting-link {
 	opacity: 0.55 !important;
+}
+
+.cm-formatting:not(.cm-inline-code).cm-strong {
+	opacity: 0.25 !important;
 }
 
 /* Prompt */
