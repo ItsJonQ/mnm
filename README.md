@@ -20,6 +20,7 @@ There are 4 different types of MNM snippets:
 - **App**: Behaviours for the entire Obsidian app.
 - **Editor**: The reading and writing experience.
 - **Font**: Typography (font) that renders in the editor / preview content.
+- **Mode**: An alternate experience for Obsidian.
 - **Theme**: Overall skin of the entire Obsidian app.
 
 ### Using snippets
