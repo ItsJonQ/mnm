@@ -1,0 +1,4 @@
+:root {
+  --text-editor: Inter, var(--font-stack-sans-serif);
+  --text-preview: var(--text-editor);
+}

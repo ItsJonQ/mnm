@@ -1,0 +1,6 @@
+:root {
+  --font-monospace: 'Source Code Pro', Menlo, SFMono-Regular, Consolas,
+    'Roboto Mono', monospace;
+  --text-editor: var(--font-monospace);
+  --text-preview: var(--text-editor);
+}

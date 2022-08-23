@@ -1,0 +1,195 @@
+:root {
+  /* Headings */
+  --h1: 1rem;
+  --h2: 1rem;
+  --h3: 1rem;
+  --h4: 1rem;
+  --h5: 1rem;
+  --h6: 1rem;
+}
+
+.markdown-preview-view h1 {
+  margin: 1em 0 1em;
+}
+
+.markdown-preview-view h2 {
+  margin: 1em 0 0.25em;
+}
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  margin: 1em 0 0.25em;
+}
+
+.HyperMD-header .cm-header-1,
+.HyperMD-header .cm-header-2,
+.HyperMD-header .cm-header-3,
+.HyperMD-header .cm-header-4,
+.HyperMD-header .cm-header-5,
+.HyperMD-header .cm-header-6,
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  /* text-transform: uppercase; */
+  /* font-variant: small-caps; */
+  text-decoration: underline;
+}
+
+.embedded-note-title,
+h1.embedded-note-title.embedded-note-title,
+h1.cm-line.embedded-note-title.embedded-note-title,
+.markdown-source-view.mod-cm6.is-line-wrap.is-readable-line-width .cm-content,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+  max-width: 65ch !important;
+}
+
+.embedded-note-title,
+h1.embedded-note-title.embedded-note-title,
+h1.cm-line.embedded-note-title.embedded-note-title {
+  margin: 0;
+}
+
+.is-live-preview .HyperMD-header-2,
+.is-live-preview .HyperMD-header-3,
+.is-live-preview .HyperMD-header-4,
+.is-live-preview .HyperMD-header-5,
+.is-live-preview .HyperMD-header-6,
+.is-live-preview .HyperMD-list-line,
+.markdown-preview-view ul li,
+.markdown-preview-view ol li {
+  padding-top: 0.15em !important;
+  padding-bottom: 0.15em !important;
+}
+
+.cm-formatting-list {
+  color: var(--text-normal) !important;
+}
+
+.cm-formatting:not(.cm-inline-code),
+.cm-formatting-link {
+  opacity: 1 !important;
+}
+
+.is-live-preview.markdown-source-view .list-bullet:after {
+  font-size: 1em;
+  top: 0;
+}
+
+.cm-hmd-list-indent,
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-rendered.show-indentation-guide li > ol::before {
+  opacity: 0 !important;
+}
+
+@media print {
+  html {
+    font-size: 10pt !important;
+  }
+  /* Setting content width, unsetting floats and margins */
+  .markdown-preview-view {
+    max-width: 75ch;
+    margin: 0 5ch;
+    float: none;
+  }
+  a {
+    color: currentColor;
+  }
+}
+
+.HyperMD-header:hover [class*='cm-header-']::before {
+  display: none;
+}
+
+[class*='cm-header-']::before {
+  position: absolute;
+  left: -4px;
+  transform: translateX(-100%) scale(0.75);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.cm-header-1::before {
+  content: 'H1';
+}
+.cm-header-2::before {
+  content: 'H2';
+}
+.cm-header-3::before {
+  content: 'H3';
+}
+.cm-header-4::before {
+  content: 'H4';
+}
+.cm-header-5::before {
+  content: 'H5';
+}
+
+.cm-active > .cm-header-2::before {
+  opacity: 0;
+}
+
+.cm-line:hover > .cm-header-2::before {
+  opacity: 0;
+}
+
+.cm-s-obsidian .HyperMD-codeblock {
+  font-size: 1em;
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+  font-size: 90%;
+}
+
+.cm-list-2 .list-bullet::after,
+.cm-list-4 .list-bullet::after {
+  content: '◦' !important;
+}
+
+.markdown-rendered pre {
+  border: 2px solid black;
+  border-radius: 0;
+  padding: 12px;
+}
+
+.cm-s-obsidian span.cm-inline-code, .markdown-preview-view code {
+  font-size: 100%;
+}
+
+.is-live-preview .ͼ1 .HyperMD-codeblock-bg.cm-line {
+  padding: 0 12px;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background: transparent;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  border-top: 2px solid black;
+  border-radius: 0;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom: 2px solid black;
+  border-radius: 0;
+}
+
+.markdown-rendered button.copy-code-button {
+  border: 2px solid black;
+  background: white;
+  color: black;
+  font-family: var(--text-preview);
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+
+.markdown-rendered button.copy-code-button:hover {
+  background: black;
+  color: white;
+}

@@ -1,0 +1,42 @@
+/*
+
+GH (MNM enhancement) by @itsjonq
+
+*/
+
+/*
+== System: Colors ==
+*/
+body.theme-light {
+  --text-heading: #2a2e33;
+  --text-normal: #4b535c;
+  --text-muted: #6e7986;
+}
+
+body.theme-dark {
+  --base-h: 210;
+  --base-s: 15%;
+  --base-d: 16%;
+
+  --background-primary: hsl(var(--base-h), var(--base-s), var(--base-d));
+  --background-primary-alt: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) - 2%)
+  );
+  --background-secondary: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) - 2%)
+  );
+  --background-secondary-alt: hsl(var(--base-h), var(--base-s), var(--base-d));
+  --background-tertiary: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) + 2%)
+  );
+
+  --text-heading: #e9eef4;
+  --text-normal: #d0d5db;
+  --text-muted: #b3b7bc;
+}

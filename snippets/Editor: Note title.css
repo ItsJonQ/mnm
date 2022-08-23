@@ -1,0 +1,17 @@
+.embedded-note-title,
+h1.embedded-note-title.embedded-note-title,
+h1.cm-line.embedded-note-title.embedded-note-title {
+  font-family: var(--text-preview);
+  font-size: var(--headlineH1, var(--heading-1, var(--h1)));
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: auto;
+  padding: 0.25em 0 0.75em;
+}
+
+.embedded-note-title.embedded-note-title__preview {
+  max-width: 700px !important;
+  padding-left: 10px !important;
+  width: 100% !important;
+  margin: auto;
+}

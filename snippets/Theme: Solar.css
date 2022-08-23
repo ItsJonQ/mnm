@@ -1,0 +1,75 @@
+/*
+
+Solar (MNM enhancement) by @itsjonq
+
+🎵 SOLASIDO 🎵
+
+*/
+
+/*
+== System: Colors ==
+*/
+body.theme-light {
+  --base-h: 38;
+  --base-s: 15%;
+  --base-l: 90%;
+
+  --background-primary: hsl(var(--base-h), var(--base-s), var(--base-l));
+
+  --text-heading: #063642;
+  --text-normal: #586e75;
+  --text-muted: #839496;
+
+  --systemBlue: #2563eb;
+
+  --enhanced-link-color: var(--systemBlue);
+  --interactive-accent: var(--systemBlue);
+  --interactive-accent-hover: var(--systemBlue);
+
+  --background-primary-alt: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) + 70%)
+  );
+  /* --background-secondary: hsl(var(--base-h), var(--base-s), 4%);
+  --background-secondary-alt: hsl(var(--base-h), var(--base-s), 10%); */
+}
+body.theme-dark {
+  --base-h: 192;
+  --base-s: 92%;
+  --base-d: 11%;
+
+  --background-primary: hsl(var(--base-h), var(--base-s), var(--base-d));
+  --background-primary-alt: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) - 2%)
+  );
+  --background-secondary: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) - 2%)
+  );
+  --background-secondary-alt: hsl(var(--base-h), var(--base-s), var(--base-d));
+  --background-tertiary: hsl(
+    var(--base-h),
+    var(--base-s),
+    calc(var(--base-d) + 2%)
+  );
+
+  --text-heading: #fdf7e3;
+  --text-normal: #92a1a1;
+  --text-muted: #586e75;
+
+  --systemBlue: #258bd2;
+
+  --enhanced-link-color: var(--systemBlue);
+  --interactive-accent: var(--systemBlue);
+  --interactive-accent-hover: var(--systemBlue);
+}
+
+body.theme-light,
+body.theme-dark {
+  --text-accent: var(--enhanced-link-color);
+  --text-accent-hover: var(--text-accent);
+}

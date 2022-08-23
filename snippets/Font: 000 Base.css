@@ -1,0 +1,21 @@
+:root {
+	/* Base */
+	--font-stack-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Microsoft YaHei Light', sans-serif;
+
+	--font-monospace: SFMono-Regular, Menlo, Consolas, 'Roboto Mono', monospace;
+	--text-editor: var(--font-stack-sans-serif);
+	--text-preview: var(--text-editor);
+	--text: var(--font-stack-sans-serif);
+}
+
+.cm-s-obsidian,
+.markdown-preview-view {
+	font-family: var(--text-preview);
+}
+
+.cm-formatting.cm-formatting-list.cm-formatting-list-ul:after {
+	font-size: 44px;
+	top: -17px;
+}

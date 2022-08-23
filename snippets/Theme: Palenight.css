@@ -1,0 +1,85 @@
+/*
+
+Palenight (MNM enhancement) by @itsjonq
+
+*/
+
+/*
+== System: Colors ==
+*/
+body.theme-dark {
+	/* Colors */
+	--systemPurple: #8b5cf6;
+	--text-normal: #a5acd0;
+	--text-bold: #c4cbf0;
+
+	--interactive-accent: var(--systemPurple);
+	--interactive-accent-hover: var(--systemPurple);
+
+	--base-h: 227;
+	--base-s: 22%;
+	--base-d: 16%;
+
+	/* --base-l-primary: 18%; */
+	--base-l-primary: 16%;
+
+	--base-l-primary-alt: calc(var(--base-l-primary) * 1.25);
+	--base-l-secondary: calc(var(--base-l-primary) * 0.75);
+	--base-l-secondary-alt: var(--base-l-primary);
+}
+
+body.theme-dark {
+	--text-muted: hsl(
+		var(--base-h),
+		calc(var(--base-s) - 10%),
+		calc(var(--base-d) + 45%)
+	);
+
+	--background-primary: hsl(
+		var(--base-h),
+		var(--base-s),
+		var(--base-l-primary)
+	);
+	--background-primary-alt: hsl(
+		var(--base-h),
+		var(--base-s),
+		var(--base-l-primary-alt)
+	);
+	--background-secondary: hsl(
+		var(--base-h),
+		var(--base-s),
+		var(--base-l-secondary)
+	);
+	--background-secondary-alt: hsl(
+		var(--base-h),
+		var(--base-s),
+		var(var(--base-l-secondary-alt))
+	);
+
+	--background-modifier-border: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) - 4%)
+	);
+	--background-modifier-border-hover: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) + 10%)
+	);
+	--background-modifier-border-focus: hsl(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) + 20%)
+	);
+	--background-modifier-cover: hsla(
+		var(--base-h),
+		var(--base-s),
+		calc(var(--base-d) - 4%),
+		0.8
+	);
+}
+
+.cm-s-obsidian .cm-strong:not(.cm-formatting-strong),
+.markdown-preview-view strong {
+	color: var(--text-bold);
+}

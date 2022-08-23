@@ -1,0 +1,10 @@
+/*
+
+Black by @itsjonq
+
+*/
+
+body.theme-dark {
+  --background-primary: black;
+  --background-secondary: #111;
+}

@@ -1,0 +1,59 @@
+/*
+
+MNM: Future by @itsjonq
+
+This snippet enhances the MNM theme to futuristic theme.
+*/
+
+:root {
+	--text: 'Blender Pro Medium', 'Inter', -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+		sans-serif;
+
+	--text-ui: var(--text);
+	/* --text-editor: var(--font-monospace);
+    --text-preview: var(--font-monospace); */
+}
+
+/**
+@media (min-width: 40em) {
+    :root {
+        --font-normal: 13px;
+        --font-small: calc(var(--font-normal) * 0.8125);
+        --font-smaller: calc(var(--font-normal) * 0.725);
+        --font-smallest: calc(var(--font-normal) * 0.6875);
+        --font-code: 0.85em;
+    }
+}
+*/
+
+body {
+	font-family: var(--text);
+}
+
+.markdown-preview-view ul > li:not(.task-list-item)::before {
+	font-size: inherit;
+}
+
+.workspace-leaf.mod-active .view-header-title,
+.markdown-preview-view h1,
+.HyperMD-header-1,
+.cm-s-obsidian .cm-header-1,
+.markdown-preview-view h2,
+.HyperMD-header-2,
+.cm-s-obsidian .cm-header-2,
+.markdown-preview-view h3,
+.HyperMD-header-3,
+.cm-s-obsidian .cm-header-3,
+.markdown-preview-view h4,
+.HyperMD-header-4,
+.cm-s-obsidian .cm-header-4,
+.markdown-preview-view h5,
+.HyperMD-header-5,
+.cm-s-obsidian .cm-header-5,
+.markdown-preview-view h6,
+.HyperMD-header-6,
+.cm-s-obsidian .cm-header-6 {
+	color: var(--text-heading);
+	font-family: var(--text);
+}

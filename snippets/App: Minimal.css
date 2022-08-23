@@ -1,0 +1,43 @@
+.status-bar {
+  display: none;
+}
+
+.view-actions:not(:hover) .view-action:not(:last-child) {
+  display: none;
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:not(:hover) {
+  border-right-color: transparent;
+}
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .side-dock-actions,
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .side-dock-settings {
+  opacity: 0;
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:hover
+  .side-dock-actions,
+.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed:hover
+  .side-dock-settings {
+  opacity: 1;
+}
+
+body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-left .workspace-ribbon-collapse-btn,
+.workspace-ribbon.side-dock-ribbon.mod-right .workspace-ribbon-collapse-btn {
+  position: fixed;
+  bottom: 8px;
+  height: 50px;
+  padding: 20px 6px;
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  left: 0;
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-right .workspace-ribbon-collapse-btn {
+  right: 0;
+}

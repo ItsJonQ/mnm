@@ -1,12 +1,25 @@
 .cm-hmd-list-indent {
-	display: inline-block;
-	font-size: 40px;
-	height: 3px;
-	line-height: 0;
-	overflow: hidden;
-	background: currentColor;
-	position: relative;
-	border-radius: 12px;
-	top: -3px;
-	opacity: 0.05;
+  display: inline-block;
+  font-size: 40px;
+  height: 3px;
+  line-height: 0;
+  overflow: hidden;
+  background: currentColor;
+  position: relative;
+  border-radius: 12px;
+  top: -3px;
+  opacity: 0.05;
+}
+
+.HyperMD-list-line-2 .cm-hmd-list-indent {
+  opacity: 0.05;
+}
+.HyperMD-list-line-3 .cm-hmd-list-indent {
+  opacity: 0.1;
+}
+.HyperMD-list-line-4 .cm-hmd-list-indent {
+  opacity: 0.15;
+}
+.HyperMD-list-line-5 .cm-hmd-list-indent {
+  opacity: 0.2;
 }

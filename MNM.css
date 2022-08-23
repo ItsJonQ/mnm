@@ -1,6 +1,6 @@
 /*
 
-MNM 0.1.1 by @itsjonq, based on Minimal by @kepano
+MNM 0.1.2 by @itsjonq, based on Minimal by @kepano
 
 This theme is designed to be used with the Minimal Theme Settings
 plugin and the Hider plugin.
@@ -3935,11 +3935,13 @@ body.theme-dark {
 .minimal-theme.links-ext-on .external-link,
 .external-link,
 .cm-url,
-.cm-hmd-internal-link {
+.cm-hmd-internal-link,
+.cm-link {
   font-weight: 500;
   text-decoration: none !important;
   box-shadow: 0 2px 0 var(--ui-link-background);
 }
+.cm-link .cm-underline,
 .cm-hmd-internal-link .cm-underline {
   text-decoration: none !important;
 }
@@ -4011,8 +4013,8 @@ body.theme-dark {
 /* Blockquote */
 .cm-quote {
   /* padding: 0.67em 0; */
-  font-weight: 600;
-  letter-spacing: -0.015em;
+  /* font-weight: 600; */
+  /* letter-spacing: -0.015em; */
   /* line-height: 1.4; */
 }
 
@@ -4256,13 +4258,6 @@ body.theme-dark {
   padding-top: 0;
 }
 
-.markdown-embed-content .markdown-preview-view ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-  padding-inline-start: 0;
-}
-
 /* Typography */
 .workspace-leaf-content[data-type='markdown'] {
   font-family: var(--text-preview);
@@ -4336,12 +4331,13 @@ body.theme-dark {
 
 /* Blockquote */
 .markdown-preview-view blockquote {
-  font-weight: 600;
-  padding: 0em 0 0em var(--nested-padding);
+  padding: 4px 0 4px var(--nested-padding);
   margin-inline-start: 0;
   /* font-size: 125%; */
-  letter-spacing: -0.015em;
   /* line-height: 1.4; */
+  border: 0 solid var(--background-modifier-border);
+  border-left-width: 5px;
+  background-color: var(--background-secondary);
 }
 
 .markdown-preview-view blockquote > blockquote {
@@ -4398,7 +4394,7 @@ body.theme-dark {
 .markdown-preview-view .task-list-item-checkbox {
   all: revert;
   background: none;
-  transform: scale(1.25);
+  /* transform: scale(1.25); */
   margin-right: 10px;
 }
 .task-list-item {
@@ -4507,7 +4503,7 @@ section.footnotes {
 
 .markdown-preview-view ul,
 .markdown-preview-view ol {
-  padding-inline-start: 1em;
+  padding-inline-start: 1.1em;
   position: relative;
 }
 
@@ -4516,7 +4512,7 @@ section.footnotes {
 }
 
 .markdown-preview-view ul.contains-task-list ul {
-  padding-inline-start: 1.5em;
+  padding-inline-start: 2.5em;
 }
 
 .markdown-preview-view ul > li:not(.task-list-item)::before {
@@ -4696,6 +4692,7 @@ section.footnotes {
 
 .is-live-preview .cm-hmd-list-indent {
   top: -3px;
+  left: -2px;
   opacity: 0.07;
   height: 4px;
 }
@@ -4724,9 +4721,6 @@ section.footnotes {
   padding-top: 0.25em !important;
   line-height: 1 !important;
 }
-.is-live-preview .HyperMD-header-1 {
-  padding-top: 0.35em !important;
-}
 
 .is-live-preview .HyperMD-list-line {
   padding-top: 4px !important;
@@ -4744,13 +4738,13 @@ section.footnotes {
   width: 16px;
   height: 16px;
   border-radius: 3px;
-  background-size: 90%;
+  background-size: contain;
   margin-left: -4px;
   box-shadow: 0 0 0 0px var(--text-selection);
   transition: all 0.16s linear;
   cursor: pointer;
   border-width: 2px;
-  background-position: 0px 1px;
+  background-position: center center;
 }
 
 .is-live-preview.markdown-source-view.mod-cm6 .task-list-item-checkbox:hover {
@@ -4770,7 +4764,7 @@ section.footnotes {
 .is-live-preview
   .cm-line:not(.cm-active)
   .cm-formatting-code
-  + .cm-inline-code {
+  + .cm-inline-code:not(.cm-formatting-code) {
   padding: 0 4px;
   border-radius: 3px;
 }
@@ -4789,4 +4783,23 @@ section.footnotes {
 
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   padding-right: 8px;
+}
+
+.is-live-preview.markdown-source-view.mod-cm6
+  .task-list-item-checkbox[type='checkbox']:checked {
+  background-color: var(--text-accent) !important;
+  border-color: var(--text-accent) !important;
+}
+
+.markdown-preview-view ul.contains-task-list {
+  padding-inline-start: 1em;
+}
+.markdown-preview-view ul.contains-task-list li.task-list-item {
+  margin-left: -1em;
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-left: var(--nested-padding);
 }

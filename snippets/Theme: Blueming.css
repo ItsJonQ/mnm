@@ -1,0 +1,124 @@
+/*
+
+Blueming by @itsjonq
+
+*/
+
+/*
+== System: Colors ==
+*/
+:root {
+  --system-brand-rgb: 20, 110, 255;
+  --system-brand-rgb-d: 20 110 255;
+  --system-brand-rgb-l: var(--system-brand-rgb-d);
+  --system-brand-alpha: 1;
+  --system-brand: rgba(var(--system-brand-rgb), var(--system-brand-alpha));
+  --system-brand-link-alpha: 0.7;
+  --system-brand-foreground: white;
+
+  --ui-link-background: rgba(
+    var(--system-brand-rgb),
+    var(--system-brand-link-alpha)
+  );
+}
+
+body.theme-light,
+body.theme-dark {
+  --text-accent: var(--enhanced-link-color);
+  --text-accent-hover: var(--text-accent);
+  --text-selection: rgba(var(--system-brand-rgb), 0.2);
+
+  --enhanced-link-color: var(--system-brand);
+  --interactive-accent: var(--system-brand);
+  --interactive-accent-hover: var(--system-brand);
+
+  --ui-link-background: rgba(
+    var(--system-brand-rgb),
+    var(--system-brand-link-alpha)
+  );
+
+  --color-accent: rgb(var(--system-brand-rgb));
+  --color-accent-d: var(--system-brand-rgb-d);
+  --color-accent-l: var(--system-brand-rgb-l);
+}
+
+body.theme-light {
+}
+
+body.theme-dark {
+}
+
+.workspace-leaf.mod-active .view-header-title,
+.markdown-preview-view h1,
+.HyperMD-header-1,
+.cm-s-obsidian .cm-header-1,
+.markdown-preview-view h2,
+.HyperMD-header-2,
+.cm-s-obsidian .cm-header-2,
+.markdown-preview-view h3,
+.HyperMD-header-3,
+.cm-s-obsidian .cm-header-3,
+.markdown-preview-view h4,
+.HyperMD-header-4,
+.cm-s-obsidian .cm-header-4,
+.markdown-preview-view h5,
+.HyperMD-header-5,
+.cm-s-obsidian .cm-header-5,
+.markdown-preview-view h6,
+.HyperMD-header-6,
+.cm-s-obsidian .cm-header-6 {
+  color: var(--text-heading);
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+  --font-code: 0.85em;
+}
+
+body.theme-light .cm-s-obsidian span.cm-inline-code,
+body.theme-light .markdown-preview-view code {
+  --ui-code-background: rgb(var(--system-brand-rgb), 0.1);
+  /* color: #e65100; */
+}
+
+body.theme-dark .cm-s-obsidian span.cm-inline-code,
+body.theme-dark .markdown-preview-view code {
+  --ui-code-background: rgb(var(--system-brand-rgb), 0.3);
+  color: rgb(var(--system-brand-rgb));
+}
+
+body.theme-light .cm-s-obsidian span.cm-formatting-code.cm-inline-code {
+  color: rgba(155, 155, 155, 0.3);
+}
+body.theme-dark .cm-s-obsidian span.cm-formatting-code.cm-inline-code {
+  color: rgba(155, 155, 155, 0.2);
+}
+
+.HyperMD-codeblock-bg {
+  --background-secondary: transparent;
+}
+
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--text-normal);
+}
+
+.is-live-preview.markdown-source-view.mod-cm6
+  .task-list-item-checkbox[type='checkbox']:checked {
+  background-color: var(--system-brand) !important;
+  border-color: var(--system-brand) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-underline {
+  text-decoration: none;
+}
+
+button.mod-cta {
+  color: var(--system-brand-foreground);
+  text-align: center;
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+.markdown-preview-view a {
+  color: inherit;
+}

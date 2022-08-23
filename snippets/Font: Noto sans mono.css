@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700;900&display=swap');
+
+:root {
+  --font-monospace: 'Noto Sans Mono', 'IBM Plex Mono', Menlo, SFMono-Regular,
+    Consolas, 'Roboto Mono', monospace;
+  --text-editor: var(--font-monospace);
+  --text-preview: var(--text-editor);
+}
+
+.is-live-preview.markdown-source-view .list-bullet:after {
+  top: -1px;
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code {
+  font-size: 97%;
+}
+
+.cm-s-obsidian
+  .cm-line:not(.cm-active)
+  span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  padding: 0 4px;
+  border-radius: 3px;
+}

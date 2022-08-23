@@ -1,0 +1,11 @@
+.markdown-preview-view a,
+.cm-link {
+  font-weight: 500;
+}
+
+.cm-s-obsidian span.cm-hmd-internal-link,
+.markdown-preview-view .internal-link {
+  text-transform: none;
+  font-size: inherit;
+  letter-spacing: 0;
+}

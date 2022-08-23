@@ -1,8 +1,6 @@
 :root {
-	--font-monospace: SFMono-Regular, Menlo, Consolas, 'Roboto Mono', monospace;
-}
-
-.cm-s-obsidian,
-.markdown-preview-view {
-	font-family: var(--font-monospace);
+  --font-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  --text-editor: var(--font-monospace);
+  --text-preview: var(--text-editor);
 }

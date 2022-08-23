@@ -1,0 +1,36 @@
+strong,
+.cm-s-obsidian .cm-strong.cm-header,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-1,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-2,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-3,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-4,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-5,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-6,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-1,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-2,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-3,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-4,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-5,
+.cm-s-obsidian .cm-strong.cm-header.cm-header-6,
+.cm-header.cm-header-3.cm-hmd-internal-link,
+.markdown-preview-section strong,
+.cm-s-obsidian .cm-strong,
+.theme-dark strong,
+.theme-dark .markdown-preview-section strong,
+.cm-s-obsidian .cm-strong {
+  color: currentColor;
+}
+
+body.theme-light {
+  --editor-bold-alpha: 0.12;
+}
+body.theme-dark {
+  --editor-bold-alpha: 0.16;
+}
+
+.cm-s-obsidian .cm-strong:not(.cm-formatting-strong),
+.markdown-preview-view strong {
+  background: rgba(var(--system-brand-rgb), var(--editor-bold-alpha));
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px rgba(var(--system-brand-rgb), var(--editor-bold-alpha));
+}
